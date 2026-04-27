@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+ehthumbs.db
+
+# Linux
+*~
+.fuse_hidden
+.directory
+.trash
