@@ -217,7 +217,11 @@ function renderResults(forcedWinner = null) {
       </div>
       <div class="result-body">
         ${sharedNotice}
-        <p class="result-desc">${policy.desc}</p>
+        <p class="result-desc">
+          ${policy.desc}
+          <br/>
+          <a href="${policy.link}" target="_blank" class="link-btn">Learn more about this policy →</a>
+        </p>
         ${tallyHTML}
 
         <div class="share-box">
@@ -238,7 +242,7 @@ function renderResults(forcedWinner = null) {
         <div class="cta-box">
           <div class="cta-title">FIND OUT MORE!</div>
           <div class="cta-row">
-            <a href="https://francescahong.com/policy" target="_blank" class="cta-btn">Read more about Fran's policies →</a>
+            <a href="https://francescahong.com/policy" target="_blank" class="cta-btn">See more policies →</a>
           </div>
         </div>
         ${isShared ? '' : '<button class="btn-restart" onclick="restartQuiz()">↺ TAKE IT AGAIN</button>'}
