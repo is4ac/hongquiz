@@ -92,8 +92,8 @@ function renderIntro() {
           we'll tell you which of her policies is basically your political soulmate.
         </p>
         <div class="intro-meta">
-          <span class="meta-pill">❓ 8 questions</span>
-          <span class="meta-pill">⚡ About 2 minutes</span>
+          <span class="meta-pill">❓ 10 questions</span>
+          <span class="meta-pill">⚡ About 3 minutes</span>
         </div>
         <button class="btn-primary" onclick="startQuiz()">LET'S FIND OUT →</button>
       </div>
@@ -301,4 +301,3 @@ function render() {
 
   render();
 })();
-

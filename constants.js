@@ -15,4 +15,3 @@ const DOWNLOAD_ICON_SVG = `<svg viewBox="0 0 18 18" fill="none">
   <path d="M9 2.25v9M5.625 8.625 9 12l3.375-3.375M3.375 13.5h11.25"
     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`;
-

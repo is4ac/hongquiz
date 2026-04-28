@@ -22,4 +22,3 @@ function getResult() {
   const winner = Object.entries(tally).sort((a, b) => b[1] - a[1])[0][0];
   return { winner, tally };
 }
-

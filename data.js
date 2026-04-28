@@ -13,9 +13,9 @@ const POLICIES = {
   childcare: {
     emoji: '🧸',
     image: 'imgs/childcare.jpg',
-    name: 'Universal Childcare',
+    name: 'Universal Childcare & Public Schools',
     tagline: "You believe it takes a village, and Fran's building one.",
-    desc: "You're the person who remembers everyone's kids' names, brings snacks without being asked, and genuinely believes we're all in this together. Fran's universal childcare plan would guarantee high-quality care at little or no cost for every Wisconsin family. Because nobody should have to choose between working and raising their kids.",
+    desc: "You're the person who remembers everyone's kids' names, brings snacks without being asked, and genuinely believes we're all in this together. Fran's universal childcare plan would guarantee high-quality care at little or no cost for every Wisconsin family. Because nobody should have to choose between working and raising their kids. In addition, Fran wants to fully restore funding to K-12, the UW system, and technical colleges, because the next generation deserves better.",
     link: 'https://francescahong.com/policy/#education',
   },
   leave: {
@@ -26,13 +26,13 @@ const POLICIES = {
     desc: "You're the one who actually logs off when you're sick and will politely-but-firmly tell anyone that \"hustle culture\" is a scam. Fran's universal paid leave bill covers every Wisconsin worker, including freelancers and the self-employed, because caring for yourself or a sick loved one shouldn't cost you your paycheck.",
     link: 'https://francescahong.com/policy/#workers',
   },
-  schools: {
-    emoji: '📚',
-    image: 'imgs/schools.jpg',
-    name: 'Fully Funded Public Schools',
-    tagline: "You're investing in Wisconsin's future, one classroom at a time.",
-    desc: "You're curious, you ask questions, and you believe deeply that a great education shouldn't depend on your ZIP code. Wisconsin's public schools used to be among the best in the country, but 15 years of Republican cuts changed that. Fran wants to fully restore funding to K-12, the UW system, and technical colleges, because the next generation deserves better.",
-    link: 'https://francescahong.com/policy/#education',
+  weedforspeed: {
+    emoji: '🌿',
+    image: 'imgs/weed.jpg',
+    name: 'Weed for Speed',
+    tagline: "You believe in getting Wisconsin rolling and connected.",
+    desc: "You're laid back and believe that everyone should be able to enjoy their best life. Fran will finally make this safe recreational and medicinal drug legal in Wisconsin and use the revenue to fund languishing state infrastructure like rural broadband. Fran will also exhaust every resource possible to expand eligibility for expungement, work to get people out of jail, and help get them good-paying jobs in the new industry.",
+    link: 'https://francescahong.com/policy/#cannabis',
   },
   healthcare: {
     emoji: '🩺',
@@ -74,6 +74,22 @@ const POLICIES = {
     desc: "You'd rather eat at the family-owned restaurant than the chain, every single time. Wisconsin's small businesses, farms, and restaurants can't always access affordable capital from big banks. Fran wants to create a state public bank, modeled on North Dakota's, offering lower-interest loans to local businesses and affordable housing projects.",
     link: 'https://francescahong.com/policy/#business-and-government',
   },
+  family: {
+    emoji: '👨‍👩‍👧',
+    image: 'imgs/family.jpg',
+    name: 'Keep Families Together',
+    tagline: "You believe that Wisconsin should protect its own people.",
+    desc: "You're the one who organizes the group chat, plans the potlucks, and actually shows up to help move furniture. Fran's vision for Wisconsin is one where we take care of each other and build community. Fran cosponsored a <a href='https://www.aclu-wi.org/news/the-keep-families-together-package-drawing-the-line-against-authoritarianism/' target='_blank' class='link-btn'>package of bills</a> in the assembly that bans ICE collaboration with schools and hospitals, provides legal aid to immigrants, and stops state support of detention centers.",
+    link: 'https://francescahong.com/policy/#immigration',
+  },
+  datacenter: {
+    emoji: '💾',
+    image: 'imgs/datacenter.jpg',
+    name: 'CTRL + ALT + DELETE',
+    tagline: "You know that AI data centers are a bad deal for Wisconsin.",
+    desc: "You're the one who keeps up with the latest tech trends and understands the importance of modern infrastructure. You know that data centers provide little local investment, <a href='https://www.cnbc.com/2025/06/20/tax-breaks-for-tech-giants-data-centers-mean-less-income-for-states.html' target='_blank' class='link-btn'>few good permanent jobs</a>, and spiking energy costs, making their subsidization irresponsible. Fran is calling for a moratorium on data center construction until we know how to protect ourselves from their environmental and energy costs.",
+    link: 'https://francescahong.com/policy/#data-centers',
+  },
 };
 
 // ─────────────────────────────────────────
@@ -87,9 +103,9 @@ const QUESTIONS = [
     text: "It's Saturday morning. What are you actually doing?",
     options: [
       { text: 'Wrangling kids or helping a family member', em: '👶', policy: 'childcare' },
-      { text: "Sleeping in: I genuinely earned it", em: '😴', policy: 'leave' },
+      { text: "Sleeping in: I genuinely earned it", em: '😴', policy: 'weedforspeed' },
       { text: 'At a farmers market or local coffee spot', em: '🧺', policy: 'business' },
-      { text: 'Reading, watching a doc, or learning something', em: '📖', policy: 'schools'},
+      { text: 'Reading, watching a show, or crafting something', em: '📖', policy: 'leave'},
     ],
   },
   {
@@ -107,7 +123,7 @@ const QUESTIONS = [
     text: 'Pick the value that drives you the most:',
     options: [
       { text: 'Community — we rise together or not at all', em: '🤝', policy: 'childcare' },
-      { text: 'Fairness — everyone deserves a real shot', em: '⚖️', policy: 'leave' },
+      { text: 'Fairness — everyone deserves a real shot', em: '⚖️', policy: 'family' },
       { text: 'Autonomy — my body, my business', em: '🙌', policy: 'repro' },
       { text: 'Sustainability — protect what we have for who comes next', em: '🌱', policy: 'environment' },
     ],
@@ -126,7 +142,7 @@ const QUESTIONS = [
     emoji: '🚗',
     text: 'The driver next to you is honking and yelling at you. What are they mad about?',
     options: [
-      { text: 'You forgot to go on green because you were reading a book', em: '📚', policy: 'schools' },
+      { text: 'You forgot to go on green because you were scrolling on your phone', em: '📱', policy: 'datacenter' },
       { text: 'You blew them a kiss', em: '💋', policy: 'repro' },
       { text: 'You drove exactly 25 MPH in a 25 MPH zone', em: '🚧', policy: 'healthcare' },
       { text: 'You accidentally cut them off with your Prius while merging', em: '🔋', policy: 'environment' },
@@ -136,10 +152,10 @@ const QUESTIONS = [
     emoji: '🗞️',
     text: 'Which of these headlines would you actually click on?',
     options: [
-      { text: "YOU WON'T BELIEVE WHAT THIS CHILD PRODIGY INVENTED", em: '🧠', policy: 'schools' },
-      { text: 'TOP 10 DIY HACKS TO MAKE YOUR LIFE AMAZING', em: '🔧', policy: 'housing' },
-      { text: 'YOU HAVE TO TRY THESE TOP 5 LOCAL RESTAURANTS', em: '🍽️', policy: 'business' },
-      { text: 'THE 12 BEST NATURE HIKES IN YOUR AREA', em: '🥾', policy: 'environment' },
+      { text: 'A Billion Dollar Corporation Just Discovered Our Town. We Were Doing Fine, Thanks.', em: '🤑', policy: 'datacenter' },
+      { text: '13 DIY Home Hacks So Good Your Landlord Will Literally Cry', em: '🔧', policy: 'housing' },
+      { text: 'I Ate at Every Restaurant in Town. These 5 Changed My Life.', em: '🍽️', policy: 'business' },
+      { text: "Here Are 12 Hikes You Need to Do Before It's Too Late", em: '🥾', policy: 'environment' },
     ],
   },
   {
@@ -147,7 +163,7 @@ const QUESTIONS = [
     text: 'Your boss calls you in to fire you. What do you say?',
     options: [
       { text: '"You can\'t fire me. I quit!"', em: '😮‍💨', policy: 'leave' },
-      { text: '"Sticks and stones may break my bones, but what you say can\'t hurt me!"', em: '🪵', policy: 'healthcare' },
+      { text: '"But I do more work than you ever do!"', em: '😡', policy: 'family' },
       { text: '"Great, I can make it to my afternoon date, then!"', em: '🗓️', policy: 'repro' },
       { text: '"I needed to work on my woodworking skills anyway."', em: '🪓', policy: 'housing' },
     ],
@@ -156,10 +172,30 @@ const QUESTIONS = [
     emoji: '🦸',
     text: 'If you could have one of these superpowers, which would you pick?',
     options: [
-      { text: 'The ability to speak any language in the world', em: '🌍', policy: 'schools' },
-      { text: 'The power to regenerate any wound', em: '🏥', policy: 'healthcare' },
+      { text: 'The ability to teleport anywhere in the world', em: '🌍', policy: 'weedforspeed' },
+      { text: 'Super strength to break any chains and withstand bullets', em: '💪', policy: 'family' },
       { text: 'The power to create delicious food out of nothing', em: '🍱', policy: 'business' },
-      { text: 'The ability to repair any broken object', em: '🛠️', policy: 'housing' },
+      { text: 'The skills to hack into any system', em: '💻', policy: 'datacenter' },
+    ],
+  },
+  {
+    emoji: '🦹',
+    text: 'What would be your villain origin story?',
+    options: [
+      { text: 'I opened my medical bill.', em: '📩', policy: 'healthcare' },
+      { text: 'An AI chatbot stole my job.', em: '🤖', policy: 'datacenter' },
+      { text: 'I got pulled over for vibes.', em: '🚗', policy: 'family' },
+      { text: 'My YouTube video was stuck buffering for over 10 minutes.', em: '📺', policy: 'weedforspeed' },
+    ],
+  },
+  {
+    emoji: '📚',
+    text: 'Someone in your group project does no work, takes all the credit, and is generally insufferable. What do you do?',
+    options: [
+      { text: 'I confront them directly and tell the teacher', em: '🧑‍🏫', policy: 'housing' },
+      { text: "I'm documenting everything in a very long, detailed email", em: '✅', policy: 'healthcare' },
+      { text: "I'm getting everyone else to vote them out", em: '🗳️', policy: 'leave' },
+      { text: "This is every group project I've ever been in..", em: '😭', policy: 'weedforspeed' },
     ],
   },
 ];
